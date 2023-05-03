@@ -1,0 +1,9 @@
+.order-section {
+    background: url(../img/order-bg.png) center 75%  no-repeat;
+}
+
+.order-title {
+    @include tablets {
+        margin-top: rem(180px);
+    }
+}
