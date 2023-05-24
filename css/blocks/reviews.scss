@@ -1,3 +1,23 @@
+.reviews-section {
+    position: relative;
+
+    &:before {
+        content: url(../../img/box.png);
+        position: absolute;
+        right: 18%;
+        bottom: rem(629px);
+
+        @include tablets {
+            right: 13%;
+            bottom: rem(946px);
+        }
+
+        @include phones {
+            bottom: rem(979px)
+        }
+      }
+}
+
 .reviews__display {
     background: $lightGrey;
     padding: rem(42px);

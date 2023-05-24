@@ -1,0 +1,236 @@
+.products-section {
+  background-color: $lightGrey;
+}
+
+.products_slider {
+  position: relative;
+}
+
+.product__container {
+  display: flex;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.product__img {
+  @include tablets {
+    margin-top: 95px;
+    width: 306px;
+  }
+}
+
+.product__col {
+  width: 50%;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablets {
+    margin-right: 0;
+    width: auto;
+  }
+
+  @include phones {
+    align-items: center;
+  }
+}
+
+.product__title {
+  font-size: rem(36px);
+  font-weight: bold;
+  margin-bottom: rem(2px);
+  color: #0d0d0d;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+
+  @include tablets {
+    font-size: rem(28px);
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  @include phones {
+    width: 60%;
+  }
+}
+
+.product__text {
+  margin-bottom: rem(24px);
+  color: $text;
+
+  @include tablets {
+    width: 580px;
+    text-align: center;
+  }
+
+  @include phones {
+    width: 79%;
+  }
+}
+
+.product__values-block {
+  padding-bottom: 25px;
+
+  &:first-child {
+    padding-right: 57px;
+
+    @include tablets {
+      padding-right: 0;
+    }
+
+    @include phones {
+      padding-right: 20px;
+    }
+  }
+}
+
+.product__values {
+  @include tablets {
+    text-align: center;
+    padding-bottom: 132px;
+  }
+}
+
+.product__values-title {
+  color: $text;
+}
+
+.product__values-amount {
+  font-weight: 700;
+}
+
+.product__values-price {
+  font-weight: 400;
+  font-size: 36px;
+}
+
+
+.product__ingredients {
+  margin-bottom: 25px;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+
+.products-slider__arrow {
+  position: absolute;
+  top: rem(245px)
+}
+
+.products-slider__arrow--direction--prev {
+  left: -50px;
+  transform: scale(-1, 1);
+  
+  @include tablets {
+    left: 150px;
+  }
+
+  @include phones {
+    left: 20px;
+  }
+}
+
+.products-slider__arrow--direction--next {
+  right: -50px;
+
+  @include tablets {
+    right: 150px;
+  }
+
+  @include phones {
+    right: 20px;
+  }
+}
+
+.ingredients {
+  position: relative;
+  display: inline-block;
+}
+
+.ingredients__button {
+  width: 90px;
+  height: 90px;
+  background: #6E6E6E;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.ingredients__button-icon {
+  margin-bottom: 6px;
+}
+
+.ingredients__button-icon-elem {
+  fill: currentColor;
+  width: 51px;
+  height: 51px;
+  display: block;
+}
+
+.ingredients__button-text {
+  font-style: italic;
+  line-height: 1;
+}
+
+.ingredients {
+  &:hover {
+    .ingredients__dropdown {
+      left: 100%;
+      opacity: 1;
+    }
+  }
+}
+
+.ingredients__dropdown {
+  color: #2f3234;
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  width: 270px;
+  padding: 25px;
+  transition: opacity .3s;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 50%;
+    width: 30px;
+    left: -29px;
+  }
+}
+
+.ingredients__table {
+  width: 100%;
+}
+
+.ingredients__icon {
+  width: 32px;
+  height: 32px;
+}
+
+.ingredients__text-container {
+  padding-left: 12px;
+}
+
+.ingredients__table-cell {
+  vertical-align: middle;
+  padding-bottom: 20px;
+}
