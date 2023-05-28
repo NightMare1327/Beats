@@ -2,8 +2,14 @@
   background-color: $lightGrey;
 }
 
-.products_slider {
+.products-slider {
   position: relative;
+
+  .bx-wrapper {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
 }
 
 .product__container {
@@ -123,34 +129,44 @@
 
 
 .products-slider__arrow {
+  background: url(../../img/arrow.svg) center center no-repeat;
+  background-size: contain;
+  display: block;
+  width: rem(13px);
+  height: rem(28px);
   position: absolute;
-  top: rem(245px)
+  top: 50%;
+  z-index: $z-content;
+  transform: translateY(-50%);
+
+  &--direction--next {
+    right: -40px;
+
+    @include tablets {
+      top: 30%;
+      right: 0;
+    }
+
+    @include phones {
+      top: 25%;
+    }
+  }
+
+  &--direction--prev {
+    left: -40px;
+    transform: rotate(-180deg);
+
+    @include tablets {
+      top: 30%;
+      left: 0;
+    }
+
+    @include phones {
+      top: 25%;
+    }
+  }
 }
 
-.products-slider__arrow--direction--prev {
-  left: -50px;
-  transform: scale(-1, 1);
-  
-  @include tablets {
-    left: 150px;
-  }
-
-  @include phones {
-    left: 20px;
-  }
-}
-
-.products-slider__arrow--direction--next {
-  right: -50px;
-
-  @include tablets {
-    right: 150px;
-  }
-
-  @include phones {
-    right: 20px;
-  }
-}
 
 .ingredients {
   position: relative;
